@@ -1,0 +1,42 @@
+<section class="py-lg">
+  <ng-container *ngIf="loading; else main">
+      <div class="loadingspinner"></div>
+  </ng-container>
+  
+  
+      <ng-template class="row" #main>
+      
+          <div class="row">
+              <div *ngFor="let course of courses"  class="
+              col-xlg-3 col-lg-4 col-md-6 pt-2">
+                <a [routerLink]="['/course/'+course.slug]">
+                <div class="card card-lift--hover shadow border-0 mt-3" >
+                  <img [src]="course.image==null ?'./assets/img/loading.png':course.image" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <div class="h6">
+                    <span class="btn-inner--icon"><i class="ni ni-button-play"></i></span> {{course.duration}}
+                    </div>
+                    <h5 class="card-text">{{course.title}}</h5>
+                    <div class="h6">
+                      <span class="btn-inner--icon"><i class="ni ni-circle-08"></i></span>  {{course.user}}
+            
+                      </div>
+                 
+                  </div>
+                </div>
+              </a>
+              </div>
+            </div>
+            <br>
+    <div  *ngIf="!loadingmore" style="display: flex;
+    align-items: center;
+    justify-content: center;">  <button class="btn btn-primary" (click)="next(last)"> Load More</button></div>
+   </ng-template>
+   
+  <ng-container *ngIf="loadingmore ">
+          <div class="loadingspinner"></div>
+  </ng-container>
+  
+  
+  </section>
+  

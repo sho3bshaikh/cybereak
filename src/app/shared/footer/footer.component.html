@@ -1,0 +1,29 @@
+<footer class="footer" [ngClass]="{'has-cards': getPath()!=='/user-profile' && getPath()!=='/register' && getPath()!=='/login'}">
+
+  <div class="container">
+
+    <hr>
+    <div class="row align-items-center justify-content-md-between">
+      <div class="col-md-6">
+        <div class="copyright">
+          &copy; {{test | date: 'yyyy'}}
+          <a [routerLink]='["/"]'>Cybereak</a>.
+        </div>
+      </div>
+      <div class="col-md-6">
+        <ul class="nav nav-footer justify-content-end">
+          <li class="nav-item">
+            <a [routerLink]='["/"]' class="nav-link" >Home</a>
+          </li>
+          <li class="nav-item">
+            <a [routerLink]='["/about"]'class="nav-link" >About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://github.com/kingbutch3r/cybereak" class="nav-link" target="_blank">Contribute</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

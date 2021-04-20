@@ -1,0 +1,31 @@
+
+<section class="py-lg">
+
+  <div *ngIf="loading" >
+    <app-loading></app-loading>
+  </div>
+ <div *ngIf="!loading" >
+  <div class="container-16x9">
+    
+    <iframe [width]="isMobile ?'100%': '68%' " class="iframe"  allowfullscreen  frameBorder="0" [src]="courses[0].videos[0].url+'&autoplay=1&start='+time+'s'| safeurl" #iframeObj ></iframe>
+</div>
+
+<h4 class="card-text p-2">{{courses[0].title}}</h4>
+
+<a  *ngFor="let tag of courses[0].tags"  [routerLink]="['/tags/'+tag]"><button  type="button" class="btn btn-secondery m-1 btn-sm">
+    <span>{{tag}}</span>
+  </button></a>
+  <hr class="m-1 p-1">
+<button (click)="timeplay(245)" class="ml-2 btn btn-icon btn-3 btn-default" type="button">
+    <span class="btn-inner--icon"><i class="ni ni-world"></i></span>
+    <span class="btn-inner--text">{{courses[0].user}}</span>
+  </button>
+  <hr class="m-1 p-1">
+<div class="col-md-12"  >
+
+<span [innerHtml]="courses[0].description | linkify"></span>
+
+</div>
+ </div>
+
+</section>

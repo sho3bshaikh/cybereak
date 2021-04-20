@@ -1,0 +1,59 @@
+<nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent  bg-gradient-primary headroom headroom--top headroom--pinned">
+  <div class="container">
+    <a class="navbar-brand mr-lg-5" [routerLink]="['/home']">
+      <img src="./assets/img/brand/white.png">
+    </a>
+
+<button class="navbar-toggler" type="button" (click)="isCollapsed = !isCollapsed"
+    [attr.aria-expanded]="!isCollapsed" aria-controls="navbar_global">
+<span class="navbar-toggler-icon"></span>
+</button>
+    
+    <div class="navbar-collapse collapse" id="navbar_global" [ngbCollapse]="isCollapsed">
+      <div class="navbar-collapse-header">
+        <div class="row">
+          <div class="col-6 collapse-brand">
+            <a [routerLink]="['/']">
+              <img src="./assets/img/brand/cbk.png">
+            </a>
+          </div>
+          <div class="col-6 collapse-close">
+            <button type="button" class="navbar-toggler" (click)="isCollapsed = !isCollapsed"
+                  [attr.aria-expanded]="!isCollapsed" aria-controls="navbar_global">
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class=" col-lg-10 col-sm-12">
+        <div  [ngClass]="{'focused':focus1===true} ">
+          <form [formGroup]="searchform" (ngSubmit)="onSubmit()" class="input-group  ">
+
+            <input class="form-control" placeholder="Search" id="query" type="text" formControlName="query"(focus)="focus1=true" (blur)="focus1=false">
+            <button type="submit" class= " btn btn-primary"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+      </div>
+      <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+        <li class="nav-item">
+          <a class="nav-link nav-link-icon" [routerLink]="['/about']"  data-toggle="tooltip" title="About Cybereak">
+         
+            <span class="nav-link-inner--text ">About</span>
+          </a>
+        </li>
+  
+
+        <li class="nav-item d-none d-lg-block ml-lg-4">
+          <a href="https://github.com/kingbutch3r/cybereak" target="_blank" class="btn btn-neutral btn-icon">
+            <span class="btn-inner--icon">
+              <i class="ni ni-collection mr-2"></i>
+            </span>
+            <span class="nav-link-inner--text">Contribute</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
