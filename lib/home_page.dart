@@ -124,6 +124,7 @@ class MyHomepage extends StatelessWidget {
                             height: 70,
                             width: 70,
                             color: Colors.grey,
+                            child: const FlutterLogo(),
                           ),
                           const SizedBox(
                             width: 10,
@@ -150,6 +151,12 @@ class MyHomepage extends StatelessWidget {
                           ),
                         ],
                       ),
+                    ),
+                    const LinearProgressIndicator(
+                      backgroundColor: Colors.grey,
+                      color: Colors.blueGrey,
+                      value: 0.7,
+                      minHeight: 5,
                     ),
                   ],
                 ),
