@@ -82,10 +82,6 @@ class MyHomepage extends StatelessWidget {
                       icon: const Icon(Icons.search),
                       onPressed: () {},
                     ),
-                    // prefixIcon: IconButton(
-                    //   icon: const Icon(Icons.clear),
-                    //   onPressed: () => _searchController.clear(),
-                    // ),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(30.0),
                     ),
@@ -111,14 +107,56 @@ class MyHomepage extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            Container(
-              height: 100,
-              width: 300,
-              child: ListView(
-                shrinkWrap: true,
-                scrollDirection: Axis.horizontal,
-                children: const [],
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Card(
+                elevation: 0,
+                color: Colors.grey[200],
+                shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(10))),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Row(
+                        children: [
+                          Container(
+                            height: 70,
+                            width: 70,
+                            color: Colors.grey,
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: const [
+                              Text(
+                                "Flutter Devlopment",
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text(
+                                "Flutter Devlopment Online Course \n By Cybreak",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  color: Color.fromARGB(255, 78, 75, 62),
+                                  fontWeight: FontWeight.w800,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
+            ),
+            const SizedBox(
+              height: 10,
             ),
             const Padding(
               padding: EdgeInsets.all(8.0),
