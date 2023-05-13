@@ -9,55 +9,8 @@ class HomeView extends GetView<HomeController> {
   const HomeView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      extendBody: true,
-      bottomNavigationBar: ClipRRect(
-        borderRadius: const BorderRadius.only(
-          topRight: Radius.circular(20),
-          topLeft: Radius.circular(20),
-        ),
-        child: BottomNavigationBar(
-          selectedItemColor: Colors.black45,
-          unselectedItemColor: Colors.black45,
-          selectedFontSize: 15,
-          unselectedFontSize: 15,
-          iconSize: 30,
-          backgroundColor: const Color.fromARGB(238, 238, 238, 238),
-          elevation: 0,
-          items: <BottomNavigationBarItem>[
-            const BottomNavigationBarItem(
-              icon: Icon(
-                Icons.home,
-              ),
-              label: "Home",
-              activeIcon: Icon(
-                Icons.home,
-              ),
-            ),
-            const BottomNavigationBarItem(
-              icon: Icon(Icons.explore),
-              label: 'Explore',
-            ),
-            BottomNavigationBarItem(
-                label: "Profile",
-                icon: Stack(
-                  children: const [
-                    Icon(Icons.person),
-                    Positioned(
-                      top: 0,
-                      right: 0,
-                      child: Icon(
-                        Icons.brightness_1,
-                        size: 15,
-                        color: Colors.redAccent,
-                      ),
-                    ),
-                  ],
-                )),
-          ],
-        ),
-      ),
-      body: Column(
+    return SingleChildScrollView(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(
@@ -350,23 +303,21 @@ class HomeView extends GetView<HomeController> {
           const SizedBox(
             height: 10,
           ),
-          Expanded(
-            child: Container(
-              color: Colors.white,
-              child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 50),
-                      child: Container(
-                        height: 100,
-                        width: 280,
-                        color: Colors.black12,
-                      ),
+          Container(
+            color: Colors.white,
+            child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 50),
+                    child: Container(
+                      height: 100,
+                      width: 280,
+                      color: Colors.black12,
                     ),
-                  ]),
-            ),
+                  ),
+                ]),
           ),
         ],
       ),
