@@ -18,7 +18,10 @@ class MyHomepage extends StatelessWidget {
             topLeft: Radius.circular(20),
           ),
           child: BottomNavigationBar(
-            fixedColor: Colors.black45,
+            selectedItemColor: Colors.black45,
+            unselectedItemColor: Colors.black45,
+            selectedFontSize: 15,
+            unselectedFontSize: 15,
             iconSize: 30,
             backgroundColor: const Color.fromARGB(238, 238, 238, 238),
             elevation: 0,
