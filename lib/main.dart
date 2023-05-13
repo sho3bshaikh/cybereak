@@ -1,7 +1,7 @@
 import 'package:cybereak/app/modules/dashboard/views/dashboard_view.dart';
 import 'package:cybereak/app/routes/app_pages.dart';
 import 'package:cybereak/firebase_options.dart';
-import 'package:cybereak/home_page.dart';
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
