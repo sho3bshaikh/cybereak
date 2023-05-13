@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "239674783869",
+    "firebase_url": "https://cybereak-d07fa.firebaseio.com",
+    "project_id": "cybereak-d07fa",
+    "storage_bucket": "cybereak-d07fa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239674783869:android:ac563c79c6bf9d6ae11914",
+        "android_client_info": {
+          "package_name": "com.cybereak.cybereak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "239674783869-h0ggtkimfl03iivbq27q71li3fllofjs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-KEr2R58r4B7dT1mAMuqY9DzlfVSDfWM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "239674783869-h0ggtkimfl03iivbq27q71li3fllofjs.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "239674783869-0dr38j9k0d64js4oi3tt16utuc8o1bi0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.cybereak"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239674783869:android:fcdbbafa8ee31645e11914",
+        "android_client_info": {
+          "package_name": "com.example.cybereak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "239674783869-h0ggtkimfl03iivbq27q71li3fllofjs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-KEr2R58r4B7dT1mAMuqY9DzlfVSDfWM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "239674783869-h0ggtkimfl03iivbq27q71li3fllofjs.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "239674783869-0dr38j9k0d64js4oi3tt16utuc8o1bi0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.cybereak"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
