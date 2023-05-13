@@ -2,8 +2,61 @@
 
 import 'package:flutter/material.dart';
 
-class MyHomepage extends StatelessWidget {
+class MyHomepage extends StatefulWidget {
   const MyHomepage({super.key});
+
+  @override
+  State<MyHomepage> createState() => _MyHomepageState();
+}
+
+class _MyHomepageState extends State<MyHomepage> {
+  int bottomSelectedIndex = 0;
+
+  List<BottomNavigationBarItem> buildBottomNavBarItems() {
+    return [
+      const BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+      const BottomNavigationBarItem(
+          icon: Icon(Icons.explore), label: "Explore"),
+      const BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
+    ];
+  }
+
+  PageController pageController = PageController(
+    initialPage: 0,
+    keepPage: true,
+  );
+  Widget buildPageView() {
+    return PageView(
+      controller: pageController,
+      onPageChanged: (index) {
+        pageChanged(index);
+      },
+      children: <Widget>[
+        Home(),
+        Explore(),
+        Profile(),
+      ],
+    );
+  }
+
+  void pageChanged(int index) {
+    setState(() {
+      bottomSelectedIndex = index;
+    });
+  }
+
+  void bottomTapped(int index) {
+    setState(() {
+      bottomSelectedIndex = index;
+      pageController.animateToPage(index,
+          duration: const Duration(milliseconds: 500), curve: Curves.ease);
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
