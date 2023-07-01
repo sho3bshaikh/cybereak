@@ -1,6 +1,7 @@
 import 'package:cybereak/app/modules/explore/views/explore_view.dart';
 import 'package:cybereak/app/modules/home/views/home_view.dart';
 import 'package:cybereak/app/modules/profile/views/profile_view.dart';
+import 'package:cybereak/app/style/color.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -12,6 +13,7 @@ class DashboardView extends GetView<DashboardController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: ColorData.backgroundColor,
       body: PageView(
         controller: controller.pageController,
         children: [HomeView(), ExploreView(), ProfileView()],

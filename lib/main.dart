@@ -1,5 +1,6 @@
 import 'package:cybereak/app/modules/dashboard/views/dashboard_view.dart';
 import 'package:cybereak/app/routes/app_pages.dart';
+import 'package:cybereak/app/style/color.dart';
 import 'package:cybereak/firebase_options.dart';
 
 import 'package:firebase_core/firebase_core.dart';
@@ -22,7 +23,10 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        textTheme:
+            TextTheme(bodyText1: TextStyle(color: ColorData.primarytextColor)),
+        backgroundColor: ColorData.backgroundColor,
+        primaryColor: ColorData.primaryButtonColor,
       ),
       getPages: AppPages.routes,
       initialRoute: AppPages.INITIAL,
